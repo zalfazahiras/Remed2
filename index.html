@@ -399,11 +399,11 @@
                         <td>' + (feature.properties['nama ruas'] !== null ? autolinker.link(feature.properties['nama ruas'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['gambar'] !== null ? '<img src="images/' + String(feature.properties['gambar']).replace(/[\\\/:]/g, '_').trim() + '">' : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <th scope="row">Nama RS</th>\
                         <td>' + (feature.properties['NAMA RS'] !== null ? autolinker.link(feature.properties['NAMA RS'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                 <tr>\
+                        <td colspan="2">' + (feature.properties['gambar'] !== null ? '<img src="images/' + String(feature.properties['gambar']).replace(/[\\\/:]/g, '_').trim() + '" '+ 'class=popupImage' +'>' : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
